@@ -1,0 +1,433 @@
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <title>Desktop - 1</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A300%2C400%2C500%2C600%2C700"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins%3A300%2C400%2C500%2C600%2C700"/>
+    <link rel="stylesheet" href="./styles/index.css"/>
+
+    <style>
+      .search-box{
+              position: relative;
+              width: 750px;
+              background: #fff;
+              /* margin: 10px auto 0; */
+              margin-left: 390px;
+              /* border-radius: 10px; */
+          }
+          .row{
+              display: flex;
+              align-items: center;
+              padding: 10px 20px;
+          }
+          input{
+              flex: 1;
+              height: 50px;
+              background: transparent;
+              border: 0;
+              outline: 0;
+              font-size: 28px;
+              color: #333;
+          }
+          button{
+              background: transparent;
+              border: 0;
+              outline: 0;
+          }
+          button .icon-search-tUm{
+              width: 30px;
+              color: #555;
+              font-size: 28px;
+              cursor: pointer;
+          } 
+          ::placeholder{
+              color: #555;
+          }
+          .result-box ul{
+              border-top: 1px solid #999;
+              padding: 15px 10px;
+          }
+          .result-box ul li{
+              list-style: none;
+              border-radius: 3px;
+              padding: 15px 10px;
+              cursor: pointer;
+              font-size: 20px;
+          }
+          .result-box ul li:hover{
+              background: #e9f3ff;
+          }
+          .result-box{
+              max-height: 300px;
+              /* overflow-y: scroll; */
+              position: absolute;
+              top: 100%; 
+              left: 0;
+              width: 100%;
+              background-color: #fff;
+              border: 1px solid #ccc;
+              border-top: none;
+              /* border-radius: 10px 10px 10px 10px;  */
+              z-index: 1; 
+              max-height: 300px;
+              overflow-y: auto;
+          }
+    </style>
+  </head>
+  <body class="container-fluid">
+  <div class="desktop-1-1sb">
+    <div class="auto-group-rdr5-evZ">
+      <div class="auto-group-xlkp-wHP">
+        <div class="auto-group-lezb-35X">
+          <img class="group-48-nJ1" src="./assets/group-48.png"/>
+          <p class="weatherme-hQy">WeatherMe</p>
+          <p class="pm-ZCH">21:00 pm</p>
+        </div>
+        <div class="auto-group-4ved-8eh">
+          <div class="auto-group-eahj-SfP">
+            <span class="auto-group-eahj-SfP-sub-0">Today</span>
+            <span class="auto-group-eahj-SfP-sub-1"> </span>
+          </div>
+          <p class="tommorow-2X7">Tommorow</p>
+          <p class="monthly-forecast-YkM">Monthly Forecast</p>
+        </div>
+      </div>
+      <div class="auto-group-twqd-fpy">
+        <p class="c-Mxh">°C</p>
+        <div class="auto-group-zvg9-4MK">
+          <div class="ellipse-5-xhb">
+          </div>
+        </div>
+        <p class="f-TPT">°F</p>
+      </div>
+    
+      <div class="search-box">
+        <div class="row">
+            <input type="text" id="input-box" placeholder="search anything" autocomplete="off">
+            <button><img class="icon-search-tUm" src="./assets/icon-search.png"/></button>
+        </div>
+        <div class="result-box">
+            
+        </div>
+    </div>
+    </div>
+    <div class="auto-group-k2vh-X1w">
+      <div class="rectangle-6-4Gm">
+      </div>
+
+      <div class="clickable" onclick="displayPreviousWeather()">
+        <img class="icon-chevron-left-arrow-MFs" src="./assets/icon-chevron-left-arrow.png"/>
+      </div>
+      
+      <div class="auto-group-tua1-g3F">
+        <div class="auto-group-r4p7-BVo">
+          <p class="burdwan-X3s">Burdwan</p>
+          <img class="icon-location-dch" src="./assets/icon-location.png"/>
+          
+        </div>
+        <p class="sunrise1" style="font-weight: bold; font-size: 2em; color: #ffffff;">Sunrise:</p>
+        <p class="sunrise" style="font-size: 2em;" > </p>
+        <p class="sunset1" style="font-weight: bold; font-size: 2em; color: #ffffff;">Sunset: </p>
+          <p class="sunset" style="font-size: 2em;"> </p>
+        <div class="auto-group-jpgh-95F">
+          <p class="aug-23-tue-UtD">Aug 23,  Tue</p>
+          <img class="icon-temperature-bhw" src="./assets/icon-temperature.png"/>
+          <p class="c-7RP">27°C</p>
+          <img class="group-41-q6V" src="./assets/group-41.png"/>
+        </div>
+        <div class="auto-group-6gvh-xS1">
+          <div class="auto-group-lm4z-t4m">
+            <div class="auto-group-hqlv-cWZ">
+              <p class="humidity-y89">Humidity</p>
+              <p class="item-99-gYM">99%</p>
+            </div>
+            <div class="auto-group-la4m-o7B">
+              <p class="visiblity-9wj">Visiblity</p>
+              <p class="km-Vkh">8km</p>
+            </div>
+          </div>
+          <div class="auto-group-hhqp-q3s">
+            <p class="air-pressure-BNd">Air Pressure</p>
+            <p class="hpa-idT">1005hPa</p>
+          </div>
+          <div class="auto-group-1f1x-fHo">
+            <p class="wind-pRb">Wind</p>
+            <p class="mph-Luj">2mph</p>
+          </div>
+        </div>
+      </div>
+      <img class="icon-chevron-left-arrow-zDb" src="./assets/icon-chevron-left-arrow-DZ7.png"/>
+      <div class="rectangle-7-ubT">
+      </div>
+    </div>
+    <div class="auto-group-rvn1-cEy">
+
+      
+      
+      <div class="auto-group-rogh-9Vo">
+        <div class="auto-group-6jss-V3s">
+          <div class="rectangle-8-DEm">
+          </div>
+          <div class="rectangle-15-KYh">
+          </div>
+          <img class="group-17-ajX" src="./assets/group-17.png"/>
+          <p class="pm-hZF">19:00 pm</p>
+          <p class="item-29-QTf">29°</p>
+        </div>
+        <div class="auto-group-wmuf-7N5">
+          <div class="rectangle-9-ecu">
+          </div>
+          <div class="rectangle-16-Kyw">
+          </div>
+          <img class="group-42-QVb" src="./assets/group-42.png"/>
+          <p class="pm-wEd">21:00 pm</p>
+          <p class="item-27-rcV">27°c</p>
+        </div>
+        <div class="auto-group-nqsx-ZWu">
+          <div class="rectangle-10-6Fw">
+          </div>
+          <div class="rectangle-17-cVB">
+          </div>
+          <img class="group-43-Jso" src="./assets/group-43.png"/>
+          <p class="pm-r8d">23:00pm</p>
+          <p class="item-27-Zoj">27°</p>
+        </div>
+        <div class="auto-group-3ujv-51P">
+          <div class="rectangle-11-QJZ">
+          </div>
+          <div class="rectangle-18-8VT">
+          </div>
+          <p class="am-vRK">1:00am</p>
+          <p class="item-26-SPf">26°</p>
+          <img class="group-44-wrD" src="./assets/group-44.png"/>
+        </div>
+        <div class="auto-group-fn7p-5Bj">
+          <div class="rectangle-12-cBf">
+          </div>
+          <div class="rectangle-19-wUq">
+          </div>
+          <p class="am-RQ1">3:00am</p>
+          <p class="item-29-957">29°</p>
+          <img class="group-45-Tbb" src="./assets/group-45.png"/>
+        </div>
+        <div class="auto-group-wh49-BnV">
+          <div class="rectangle-13-jZ7">
+          </div>
+          <div class="rectangle-20-rtd">
+          </div>
+          <img class="group-46-Z2M" src="./assets/group-46.png"/>
+          <p class="am-Vgh">5:00am</p>
+          <p class="item-31-ohP">31°</p>
+        </div>
+      </div>
+      <div class="auto-group-uzdt-v1K">
+        <div class="rectangle-14-4tD">
+        </div>
+        <div class="rectangle-21-bdF">
+        </div>
+        <p class="am-5oK">7:00am</p>
+        <p class="item-27-1BB">27°</p>
+        <img class="group-47-XQR" src="./assets/group-47.png"/>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script>
+
+          const searchBtn = document.querySelector('button');
+
+          const resultsBox = document.querySelector(".result-box");
+          const inputBox = document.getElementById("input-box");
+          
+        
+
+      inputBox.oninput = async function () {
+        
+      let input = inputBox.value.trim();
+
+        let result = [];
+
+      if (input.length > 0) {
+          try {
+              const response = await fetch(`http://api.geonames.org/searchJSON?q=${input}&maxRows=10&username=hari`);
+              const data = await response.json();
+              result = data.geonames.map(item => item.name);
+          } catch (error) {
+              console.error('Error fetching data:', error);
+          }
+      }
+
+      display(result);
+
+              if(!result.length){
+                  resultsBox.innerHTML = ''; 
+              }
+
+      
+      
+    };
+          function display(result){
+              const content = result.map((list)=>{
+                  return "<li onclick=selectInput(this)>" + list + "</li>";
+              });
+              resultsBox.innerHTML = "<ul>" + content.join('') + "</ul>";
+          }
+
+          function selectInput(list){
+              // inputBox.value = list.innerHTML;
+              const cityName = list.innerHTML;
+              inputBox.value = cityName;
+              resultsBox.innerHTML = '';
+              displayWeather(cityName);
+          }
+
+
+          
+  const apiKey = "834fe7d5faccbc6960b246da4da23980";
+  const apiUrl = "https://api.openweathermap.org/data/2.5/weather?";
+
+  async function checkWeather(city) {
+  try {
+    const response = await fetch(`${apiUrl}q=${city}&APPID=${apiKey}`);
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    const data1 = await response.json();
+    return data1;
+
+  } catch (error) {
+    console.error('Error fetching data:', error);
+  }
+}
+
+
+
+
+async function saveWeatherDetails(city, weatherData) {
+
+        <!-- localStorage.setItem(city, JSON.stringify(weatherData)); -->
+
+        const weatherDetailsArray = JSON.parse(localStorage.getItem('weatherDetailsArray')) || [];
+
+
+    const newWeatherDetails = {
+        city: city,
+        data: weatherData
+    };
+    weatherDetailsArray.push(newWeatherDetails);
+
+    localStorage.setItem('weatherDetailsArray', JSON.stringify(weatherDetailsArray));
+
+    }
+  
+
+
+
+
+
+
+    
+    function getWeatherDetails(city) {
+        return JSON.parse(localStorage.getItem(city));
+    }
+
+async function displayWeather(city) {
+     // const weatherData = await checkWeather(city);
+  let weatherData = getWeatherDetails(city);
+
+if (!weatherData) {
+      weatherData = await checkWeather(city);
+      saveWeatherDetails(city, weatherData);
+      localStorage.setItem('previousCity',city);
+}
+
+if (weatherData) {
+const temperatureCelsius = weatherData.main.temp - 273.15;
+
+const date = new Date();
+const options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
+const formattedDate = date.toLocaleDateString(undefined, options);
+
+document.querySelector(".burdwan-X3s").innerHTML = weatherData.name;
+document.querySelector(".c-7RP").innerHTML = Math.round(temperatureCelsius) + "°C";
+document.querySelector(".item-99-gYM").innerHTML = weatherData.main.humidity + "%";
+document.querySelector(".mph-Luj").innerHTML = weatherData.wind.speed + "km/h";
+document.querySelector(".km-Vkh").innerHTML = weatherData.visibility + "km";
+document.querySelector(".hpa-idT").innerHTML = weatherData.main.pressure + "hPa";
+document.querySelector(".aug-23-tue-UtD").innerHTML = formattedDate;
+
+// document.querySelector(".sunrise").textContent = new Date(weatherData.sys.sunrise * 1000).toLocaleTimeString('en-US', {timeZone: 'Asia/Kolkata'});
+// document.querySelector(".sunset").textContent = new Date(weatherData.sys.sunset * 1000).toLocaleTimeString('en-US', {timeZone: 'Asia/Kolkata'});
+
+const sunriseTime = new Date(weatherData.sys.sunrise * 1000);
+const sunsetTime = new Date(weatherData.sys.sunset * 1000);
+
+
+const timezone = await getTimezone(weatherData.coord.lat, weatherData.coord.lon);
+
+
+document.querySelector(".sunrise").textContent = sunriseTime.toLocaleTimeString('en-US', { timeZone: timezone });
+document.querySelector(".sunset").textContent = sunsetTime.toLocaleTimeString('en-US', { timeZone: timezone });
+}
+}
+ 
+
+    
+  
+
+
+function getPreviousCity(){
+  return localStorage.getItem('previousCity');
+}
+
+function displayPreviousWeather(){
+  const previousCity = getPreviousCity();
+
+  if(previousCity){
+    displayWeather(previousCity);
+  }
+  else{
+    console.log('No previous city found');
+  }
+}
+
+document.querySelector(".clickable").addEventListener("click", () => {
+        displayPreviousWeather();
+    });
+
+async function getTimezone(latitude, longitude) {
+  try {
+    const response = await fetch(`http://api.geonames.org/timezoneJSON?lat=${latitude}&lng=${longitude}&username=hari`);
+    const data = await response.json();
+    return data.timezoneId;
+  } catch (error) {
+    console.error('Error fetching timezone data:', error);
+    return 'UTC'; 
+  }
+}
+
+
+
+  function selectInput(list) {
+    const cityName = list.innerHTML; 
+    inputBox.value = cityName;
+    resultsBox.innerHTML = ''; 
+    displayWeather(cityName);
+}
+  searchBtn.addEventListener("click", ()=>{
+    const searchInput = document.getElementById("input-box");
+    const cityName = searchInput.value.trim(); 
+  
+    if (cityName) {
+        displayWeather(cityName); 
+    }
+  })
+    
+  </script>
+  </body>
